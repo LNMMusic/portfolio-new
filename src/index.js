@@ -1,7 +1,7 @@
 // LIBS
 import React from 'react';  import ReactDOM from 'react-dom';
 // CSS                                                          [html head]
-import './normalize.css';   import './index.css';
+import 'normalize.css';     import './index.css';               // + custom css libraries
 
 
 
