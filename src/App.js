@@ -11,11 +11,13 @@ import './App.css';
 // APP
 function App() {
   return (
-    <div className="App">
-      {/* Root */}
-      <Route path="/" exact component={HomePage}/>
-
-    </div>
+    <Router>
+      <div className="App">
+        {/* Root */}
+        <Route path="/" exact component={HomePage}/>
+        
+      </div>
+    </Router>
   );
 }
 
