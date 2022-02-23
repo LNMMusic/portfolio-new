@@ -1,8 +1,8 @@
 // LIBS
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import './App.css';
+import './App.css'
 // Pages
-// ...
+import HomePage from './pages/HomePage';
 // Components
 // ...
 
