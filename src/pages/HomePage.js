@@ -13,7 +13,7 @@ const HomePage = () => {
             </div>
 
             <div className="section-description">
-
+                
             </div>
 
             <div className="section-projects">
@@ -25,7 +25,7 @@ const HomePage = () => {
             </div>
 
             <div className="section-contact">
-                
+
             </div>
         </>
     )

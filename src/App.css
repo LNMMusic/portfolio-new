@@ -1,38 +1,104 @@
 /* FOR GENERAL STYLING ON THE APP THAT CONTAINS ALL THE REST OF PAGES AND COMPONENTS */
 body {
-    background-color: var(--ad-primary2);
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
 }
 
 /* SECTIONS */
 /* HERO */
 .section-hero {
-    background-image: url('./assets/backgroud-retro-2.webp');
-    background-repeat: no-repeat;
     height: 500px;
-    background-color: var(--ad-primary2);
+    background: var(--ad-primary2);
+
+    /* background image */
+    background: url('./assets/backgroud-retro-2.webp') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
-.section-hero .navbar {
+
+.navbar {
     height: 125px;
     background-color: var(--ad-dark);
-    opacity: 0.8;
+    opacity: 0.90;
 }
-.section-hero .navbar .navbar-items {
+.navbar:hover {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.navbar-items {
     padding-top: 5rem;
 
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-.section-hero .navbar .navbar-items li {
+.navbar-item {
+    position: relative;
     color: whitesmoke;
     font-size:larger;
 }
-.section-hero .navbar .navbar-items li:hover {
-    cursor: pointer;
-    color: var(--ad-primary);
-    font-size:larger;
+.navbar-item::before {
+    content: "";
+    position: absolute;
+    display: block;
+
+    width: 100%;
+    height: 1px;
+    bottom: -5px;
+    left: 0;
+
+    background-color: var(--ad-secondary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+.navbar-item:hover {
+    color: var(--ad-secondary);
+}
+.navbar-item:hover::before {
+    transform: scaleX(1);
 }
 
+
+.hero-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 8vw;
+    letter-spacing: 8px;
+
+    
+    position: relative;
+    display: inline-block;
+    /* background-color: #9bbfab48; */
+    left: 50%;    top: 18vw;
+
+    transform: translate(-50%, -50%);
+    color: var(--ad-primary);
+    cursor: pointer;
+}
+.hero-title::before {
+    content: "WELCOME";
+    position: absolute;
+    color: transparent;
+    background-image: repeating-linear-gradient(45deg,transparent 0,transparent 2px,var(--ad-primary2-tr) 2px,var(--ad-primary2-tr) 4px);
+    -webkit-background-clip: text;
+    top: 0px;    left: 0;    z-index: -1;
+    transition: 1s;
+}
+.hero-title::after {
+    content: "WELCOME";
+    position: absolute;
+    color: transparent;
+    background-image: repeating-linear-gradient(135deg,transparent 0,transparent 2px,var(--ad-primary2-tr) 2px,var(--ad-primary2-tr) 4px);
+    -webkit-background-clip: text;
+    top: 0px;    left: 0px;
+    transition: 1s;
+}
+.hero-title:hover:before {
+    top: 10px;    left: 10px;
+}
+.hero-title:hover:after {
+    top: -10px;    left: -10px;
+}
 
 
 

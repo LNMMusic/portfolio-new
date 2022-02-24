@@ -1,4 +1,18 @@
 /* FOR GENERAL CSS STYLING ON THE HTML */
+/* Fonts */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('./assets/fonts/poppins/Poppins-BlackItalic.ttf');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    src: url('./assets/fonts/roboto/Roboto-Bold.ttf');
+}
+
 /* Const */
 /* ... */
 :root {
@@ -9,6 +23,14 @@
     --ad-secondary2: #F2D6B3;
     --ad-thirty: #F2E2CE;
 }
+:root {
+    --ad-dark-tr: #262626a2;
+    --ad-primary-tr: #698C78a2;
+    --ad-primary2-tr: #9BBFABa2;
+    --ad-secondary-tr: #D9BD89a2;
+    --ad-secondary2-tr: #F2D6B3a2;
+    --ad-thirty-tr: #F2E2CEa2;
+}
 
 /* General */
 /* ... */
@@ -16,6 +38,10 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+a, a:hover, a:focus, a:active{
+    text-decoration: none;
+    color: inherit;
 }
 
 

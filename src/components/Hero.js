@@ -11,12 +11,15 @@ const Hero = () => {
         <>
             <nav className='navbar'>
                 <ul className='navbar-items'>
-                    <li>Description</li>
-                    <li>Projects</li>
-                    <li>Experiences</li>
-                    <li>Contact</li>
+                    <li><a className='navbar-item'>Description</a></li>
+                    <li><a className='navbar-item'>Projects</a></li>
+                    <li><a className='navbar-item'>Experiences</a></li>
+                    <li><a className='navbar-item'>Contact</a></li>
                 </ul>
             </nav>
+
+            <span className='hero-title'>WELCOME</span>
+
         </>
     )
 }
