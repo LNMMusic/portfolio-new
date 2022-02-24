@@ -1,6 +1,23 @@
 /* FOR GENERAL CSS STYLING ON THE HTML */
-/* Utils */
+/* Const */
 /* ... */
+:root {
+    --ad-dark: #262626;
+    --ad-primary: #698C78;
+    --ad-primary2: #9BBFAB;
+    --ad-secondary: #D9BD89;
+    --ad-secondary2: #F2D6B3;
+    --ad-thirty: #F2E2CE;
+}
 
 /* General */
+/* ... */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Utils */
 /* ... */

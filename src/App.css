@@ -1,9 +1,37 @@
 /* FOR GENERAL STYLING ON THE APP THAT CONTAINS ALL THE REST OF PAGES AND COMPONENTS */
-
+body {
+    background-color: var(--ad-primary2);
+}
 
 /* SECTIONS */
 /* HERO */
+.section-hero {
+    background-image: url('./assets/backgroud-retro-2.webp');
+    background-repeat: no-repeat;
+    height: 500px;
+    background-color: var(--ad-primary2);
+}
+.section-hero .navbar {
+    height: 125px;
+    background-color: var(--ad-dark);
+    opacity: 0.8;
+}
+.section-hero .navbar .navbar-items {
+    padding-top: 5rem;
 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.section-hero .navbar .navbar-items li {
+    color: whitesmoke;
+    font-size:larger;
+}
+.section-hero .navbar .navbar-items li:hover {
+    cursor: pointer;
+    color: var(--ad-primary);
+    font-size:larger;
+}
 
 
 
@@ -11,16 +39,14 @@
 /* DESCRIPTION */
 
 
-/*  */
+/* PROJECTS */
+
+
+/* EXPERIENCES */
+
+
+/* CONTACT */
 
 
 /*  */
 
-
-/*  */
-
-
-/*  */
-
-
-/*  */
