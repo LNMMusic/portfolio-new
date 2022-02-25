@@ -12,6 +12,11 @@
     font-style: normal;
     src: url('./assets/fonts/roboto/Roboto-Bold.ttf');
 }
+@font-face {
+    font-family: 'Roboto-Normal';
+    font-style: normal;
+    src: url('./assets/fonts/roboto/Roboto-Regular.ttf');
+}
 
 /* Const */
 /* ... */
@@ -30,12 +35,40 @@
     --ad-secondary-tr: #D9BD89a2;
     --ad-secondary2-tr: #F2D6B3a2;
     --ad-thirty-tr: #F2E2CEa2;
+
+    --ad-primary2-tr-less: #9bbfabd3;
+    --ad-dark-tr-less: #2626266b;
 }
 
 /* General */
 /* ... */
+::-webkit-scrollbar {
+    width: 10px;
+    border: none;
+}
+::-webkit-scrollbar-track {
+    background: var(--ad-dark-tr-less);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--ad-dark-tr);
+    border-radius: 5px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(60, 56, 78, 0.719);
+}
+body {
+    font-family: 'Roboto-Normal', sans-serif;
+    letter-spacing: 0.5px;
+    
+    overflow-x: hidden;
+}
 ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li {
     margin: 0;
     padding: 0;
 }
@@ -46,4 +79,8 @@ a, a:hover, a:focus, a:active{
 
 
 /* Utils */
-/* ... */
+.section-flex {
+    display: flex;
+    margin-inline: 6rem;
+    margin-top: 2rem; margin-bottom: 2rem;
+}

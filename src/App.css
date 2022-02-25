@@ -1,14 +1,10 @@
 /* FOR GENERAL STYLING ON THE APP THAT CONTAINS ALL THE REST OF PAGES AND COMPONENTS */
-body {
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 2px;
-}
 
 /* SECTIONS */
 /* HERO */
 .section-hero {
     height: 500px;
-    background: var(--ad-primary2);
+    /* height: 45vw; */
 
     /* background image */
     background: url('./assets/backgroud-retro-2.webp') no-repeat;
@@ -17,26 +13,28 @@ body {
 }
 
 .navbar {
-    height: 125px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+
     background-color: var(--ad-dark);
     opacity: 0.90;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding-top: 4rem;
+    padding-bottom: 1.5rem;
 }
 .navbar:hover {
     opacity: 1;
     transition: opacity 0.5s;
 }
 
-.navbar-items {
-    padding-top: 5rem;
 
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
 .navbar-item {
     position: relative;
     color: whitesmoke;
-    font-size:larger;
 }
 .navbar-item::before {
     content: "";
@@ -57,6 +55,11 @@ body {
 }
 .navbar-item:hover::before {
     transform: scaleX(1);
+}
+
+
+.navbar-mobile-toggle {
+    display: none;
 }
 
 
@@ -116,3 +119,86 @@ body {
 
 /*  */
 
+
+
+
+
+
+/* MEDIA QUERYS */
+@media (max-width: 960px) {
+    .hero-title {
+        font-size: 9vw;
+    }
+}
+@media (max-width: 800px) {
+    .hero-title {
+        font-size: 10vw;
+    }
+}
+
+@media (max-width: 480px) {
+    /* case menu toggle hidden */
+    .navbar {
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 40%;
+        background: var(--ad-primary2-tr-less);
+        backdrop-filter: blur(0.5rem);
+
+        flex-direction: column;
+        justify-content: inherit;
+        gap: 1rem;
+        
+        padding: min(20vh, 5rem);
+
+        transform: translateX(100%);
+    }
+    .navbar-item {
+        color: var(--ad-dark-tr);
+    }
+    .navbar-mobile-toggle {
+        display: block;
+        position: absolute;
+        aspect-ratio: 1; width: 2.3rem;
+        
+        z-index: 9999;
+        top: 2rem;
+        right: 2rem;
+
+        background: url('./assets/icons/menu-open.svg') no-repeat;
+        background-size: contain;
+        border: 0;
+    }
+    /* case menu toggle visible */
+    .navbar[aria-expanded="true"] {
+        transform: translateX(0%);
+        transition: transform 350ms ease-out;
+    }
+    .navbar-mobile-toggle[aria-expanded="true"] {
+        background: url('./assets/icons/menu-close.svg') no-repeat;
+        background-size: contain;
+        border: 0;
+    }
+
+    /* others */
+    .hero-title {
+        top: 30vw;
+        font-size: 12vw;
+    }
+}
+
+
+@media (max-width: 360px) {
+    .hero-title {
+        /* top: 15vw;        left: 35%; */
+        top: 55px;        left: 35%;
+        font-size: 9vw;
+
+        color: var(--ad-secondary);
+        background-color: var(--ad-dark-tr-less);
+    }
+    .hero-title::before, .hero-title::after {
+        color: rgba(216, 112, 147, 0.904);
+        padding-left: 0.1rem;
+    }
+}

@@ -1,16 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 
 
 const Hero = () => {
-  
+    // States
+    const [menuToggle, setMenuToggle] = useState("false");
 
-
+    // Handlers
+    const handlerMenuToggle = () => {
+        if (menuToggle === "false") {
+            setMenuToggle("true")
+        } else if (menuToggle === "true") {
+            setMenuToggle("false")
+        }
+    }
 
     return (
         <>
-            <nav className='navbar'>
-                <ul className='navbar-items'>
+            <button
+                aria-controls='navbar'
+                aria-expanded={menuToggle}
+                className='navbar-mobile-toggle'
+                onClick={() => handlerMenuToggle()}
+            ></button>
+
+            <nav>
+                <ul id='navbar' className='navbar' aria-expanded={menuToggle}>
                     <li><a className='navbar-item'>Description</a></li>
                     <li><a className='navbar-item'>Projects</a></li>
                     <li><a className='navbar-item'>Experiences</a></li>

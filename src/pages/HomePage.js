@@ -1,6 +1,7 @@
 import React from 'react'
 // Components
 import Hero from '../components/Hero'
+import Description from '../components/Description'
 
 
 const HomePage = () => {
@@ -12,19 +13,19 @@ const HomePage = () => {
                 <Hero />
             </div>
 
-            <div className="section-description">
-                
+            <div className="section-flex section-description">
+                <Description />
             </div>
 
-            <div className="section-projects">
-
-            </div>
-
-            <div className="section-experiences">
+            <div className="section-flex section-projects">
 
             </div>
 
-            <div className="section-contact">
+            <div className="section-flex section-experiences">
+
+            </div>
+
+            <div className="section-flex section-contact">
 
             </div>
         </>
