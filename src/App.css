@@ -1,7 +1,7 @@
 /* FOR GENERAL STYLING ON THE APP THAT CONTAINS ALL THE REST OF PAGES AND COMPONENTS */
 
 /* SECTIONS */
-/* HERO */
+/* HERO         _________________________________________*/
 .section-hero {
     height: 500px;
     /* height: 45vw; */
@@ -35,6 +35,7 @@
 .navbar-item {
     position: relative;
     color: whitesmoke;
+    text-transform: uppercase;
 }
 .navbar-item::before {
     content: "";
@@ -105,19 +106,64 @@
 
 
 
-/* DESCRIPTION */
+/* DESCRIPTION  _________________________________________ */
+.section-description {
+    grid-template-columns: 3fr 2fr;
+}
+
+.set-pictures {
+    position: relative;
+    top: 0; left: 5.5rem;
+}
+.set-pictures img {
+    height: 400px;
+    width: 300px;
+}
+
+.pic-active {
+    position: relative;
+    top: 0; left: 0;
+    z-index: 2;
+}
+.pic-active:hover {
+    transform: scale(1.01);
+    transition: transform 350ms ease-in-out;
+}
+.pic-hidden {
+    position: absolute;
+    top: 2rem; left: 3.5rem;
+    z-index: 1;
+    
+    filter: blur(1.5px);
+    transition: filter, left 350ms ease-in-out;
+}
+.pic-hidden:hover {
+    filter: blur(0px);
+    left: 5.5rem;
+    
+    transition: filter, left 350ms ease-in-out;
+    cursor: grab;
+}
 
 
-/* PROJECTS */
 
 
-/* EXPERIENCES */
+/* PROJECTS     _________________________________________*/
+.section-projects {
+    margin-inline: 0rem;
+    margin-top: 11rem;
+    
+    height: 750px;
+    background: linear-gradient(100deg, rgba(52, 44, 66, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
+    -webkit-clip-path: polygon(100% 20%, 100% 80%, 0 100%, 0 0);
+    
+}
+
+/* EXPERIENCES  _________________________________________*/
 
 
-/* CONTACT */
+/* CONTACT      _________________________________________*/
 
-
-/*  */
 
 
 
